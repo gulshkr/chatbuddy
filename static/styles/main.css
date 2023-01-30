@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
+
+
+:root{
+    --shaddow:0 4px 6px -1px rgba(0,0,0,0.1),0 2px 4px -1px rgba(0,0,0,0.06);
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(202, 199, 199);
+}
+
+/*-----------------Lobby styling from here-----------*/
+
+#logo{
+    display: block;
+    width: 100px;
+    margin: 0 auto;
+}
+
+#form-container{
+    width: 400px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: var(--shadow);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#welcome-message{
+    text-align: center;
+    margin-bottom: 20px;
+    
+}
+
+#welcome-message h1{
+   font-size: 36px;
+}
+
+#welcome-message p{
+    font-size: 18px;
+}
+
+.form-field{
+    margin: 20px;
+}
+
+.form-field label{
+    margin: 16px;
+    line-height: 1.7em;
+}
+
+.form-field input{
+    width: 100%;
+    padding: 10px;
+    border: 2px solid rgb(181, 192, 202);
+    border-radius: 5px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.form-field input[type='submit']{
+    background-color: rgb(15, 67, 113);
+    border: none;
+    cursor: pointer;
+    color: rgb(189, 189, 221);
+}
+
+@media screen and (max-width:450px) {
+    #form-container{
+        width: 95%;
+    }
+
+    #welcome-message h1{
+        font-size: 24px;
+    }
+}
+
+
+/*-----------------Room styling from here-----------*/
+
+#room-name-wrapper{
+    text-align: center;
+    margin: 20px 0;
+    font: 20px;
+}
+
+#video-streams{
+    display: flex;
+    flex-wrap: wrap;
+    height: 85vh;
+    width: 75%;
+    margin: 0 auto;
+}
+.video-container{
+    flex-basis: 500px;
+    flex-grow: 1;
+    max-height: 100%;
+    min-height: 350px;
+    border: 1px solid rgba(90, 90, 137, 1);
+    border-radius: 5px;
+    margin: 2px;
+    background-color: rgba(200, 191, 191, 1);
+    position: relative;
+}
+
+.video-player{
+    height: 100%;
+    width: 100%;
+}
+
+.video-player > *{
+    border-radius: 5px;
+}
+
+.username-wrapper{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px 0 0 0;
+    font-size: 14px;
+}
+
+@media screen and (max-width: 1650px) {
+    .video-container{
+        flex-basis: 300px;
+        min-height: 200px;
+    }
+}
+    
+
+
+/*-----------------Room styling || controls-----------*/
+
+#controls-wrapper{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    column-gap: 1em;
+    padding: 5px 20px;
+    position: fixed;
+    bottom:20px;
+
+
+}
+
+.control-icon{
+    height: 20px;
+    width: 20px;
+    box-shadow: var(--shaddow);
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#leave-btn{
+    background-color: rgb(197, 12, 12);
+}
